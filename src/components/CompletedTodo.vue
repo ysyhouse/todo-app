@@ -1,0 +1,24 @@
+<template>
+    <div>
+       completed count: {{ numberOfCompletedTodo }} 
+    </div>
+</template>
+<script>
+export default {
+    // props:{
+    //     todos:{
+    //         type:Array,
+    //         required : true
+    //     }
+
+    // },
+    computed:{
+        // todos(){
+        //     return this.$store.state.todos;
+        // },
+        numberOfCompletedTodo(){
+            return this.$store.getters['todo/numberOfCompletedTodo'];
+        }
+    }
+}
+</script>
